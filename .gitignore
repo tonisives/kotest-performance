@@ -1,0 +1,7 @@
+.gradle
+.idea
+build
+libs/streaming-json-schema
+out
+.DS_Store
+.env

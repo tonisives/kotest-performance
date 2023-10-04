@@ -1,0 +1,23 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="trace">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- spring -->
+    <logger name="org.apache" level="warn"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="sun.net" level="warn"/>
+    <logger name="java.io.serialization" level="warn"/>
+    <logger name="javax.management" level="warn"/>
+
+    <!-- a lot of logs from amazon sdk and netty (it's http client) -->
+    <logger name="software.amazon" level="warn"/>
+    <logger name="io.netty" level="warn"/>
+    <logger name="io.grpc" level="warn"/>
+</configuration>
